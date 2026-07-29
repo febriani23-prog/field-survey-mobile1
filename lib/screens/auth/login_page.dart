@@ -81,6 +81,13 @@ class _LoginPageState extends State {
                       onPressed: () {
                         context.go("/dashboard");
                       },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
                       child: const Text("LOGIN"),
                     ),
                   ),

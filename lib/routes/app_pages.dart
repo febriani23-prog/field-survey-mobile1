@@ -1,12 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_application_febri/screens/auth/login_page.dart';
-import 'package:flutter_application_febri/screens/dashboard.dart';
+import 'package:flutter_application_febri/dashboard/dashboard.dart';
 import 'package:go_router/go_router.dart';
+
+import '../screens/auth/login_page.dart';
+import '../screens/auth/register_page.dart';
+import '../screens/dashboard.dart';
 import '../screens/splash/splash_screen.dart';
 import 'app_routes.dart';
 
 class AppPages {
-  static final router = GoRouter(
+  static final GoRouter router = GoRouter(
     initialLocation: AppRoutes.splash,
     routes: [
       GoRoute(
@@ -15,11 +17,15 @@ class AppPages {
       ),
       GoRoute(
         path: AppRoutes.login,
-        builder: (context, state) => LoginPage(),
+        builder: (context, state) => const LoginPage(),
       ),
       GoRoute(
-        path: AppRoutes.login,
-        builder: (context, state) => DashboardPage(),
+        path: AppRoutes.register,
+        builder: (context, state) => const RegisterPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.dashboard,
+        builder: (context, state) => const DashboardPage(),
       ),
     ],
   );
